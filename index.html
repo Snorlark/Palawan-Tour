@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palawan | Official Travel Site for Palawan Islands</title>
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="icon" href="img\logo-website.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        window.addEventListener('scroll', function() {
+        var header = document.querySelector('header');
+        var section = document.getElementById('know-section');
+        var sectionOffsetTop = section.offsetTop;
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition >= sectionOffsetTop) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    });
+    </script>
+</head>
+
+<body>
+
+    <div class="video-container">
+        <video autoplay loop muted plays-inline class="bg-video">
+            <source src="img/background_video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <a href="#"><img class="logo" src="img\logo-white.png" alt="logo"></a> 
+        <nav>
+            <ul class="nav_links">
+                <li><a href="places.html">Places to go</a></li>
+                <li><a href="things.html">Things to do</a></li>
+                <li><a href="foods.html">Foods to eat</a></li>
+                <li><a href="deals.html">Deals & Offers</a></li>
+            </ul>   
+        </nav>
+        <a class="account" href="#sign-up"><button>Sign up</button></a>
+    </header>
+
+    <div class="content">
+        <span>World's Best & <br> Friendliest Island</span>
+    </div>
+
+    <div class="offers">
+        <span>What activity are you looking for?</span>
+        
+        <div class="buttons">
+            <a href="island-hopping.html"><button>Island Hopping</button></a>
+            <a href="shipwreck-diving.html"><button>Diving</button></a>
+            <a href="underground-river.html"><button>Undergrounding</button></a>
+        </div>
+    </div>
+
+     <a href="#know-section"><div class="down-arrow"></div></a>
+
+    <section class="know" id="know-section">
+        <div class="title-container">
+            <span class="title"> All You Need to Know!</span>
+            <span class="subtitle">Here are list of things you need to know about Palawan:</span>
+        </div>
+        <ul class="list">
+            <li class="item">
+                <a href="about-palawan.html"> <div class="know-content">
+                    <img src="img\geography-palawan.jpg" alt="Item 1">
+                    <div class="overlay"></div>
+                    <span>About Palawan &#8594;</span>
+                </div></a> 
+            </li>
+            <li class="item">
+                <a href="places.html"> <div class="know-content">
+                    <img src="img\culture-palawan.jpg" alt="Item 2">
+                    <div class="overlay"></div>
+                    <span>Destinations &#8594;</span>
+                </div></a>
+            </li>
+            <li class="item">
+                <a href="things.html"> <div class="know-content">
+                    <img src="img\guide-palawan.png" alt="Item 3">
+                    <div class="overlay"></div>
+                    <span>Activities &#8594;</span>
+                </div></a>
+            </li>
+            <li class="item">
+                <a href="foods.html"><div class="know-content">
+                    <img src="img\main-course.jpg" alt="Item 4">
+                    <div class="overlay"></div>
+                    <span>Delicacies &#8594;</span>
+                </div></a> 
+            </li>
+            <li class="item">
+                <a href="deals.html"><div class="know-content">
+                    <img src="img\do-palawan.jpeg" alt="Item 5">
+                    <div class="overlay"></div>
+                    <span>Tours &#8594;</span>
+                </div></a>
+            </li>
+            <li class="item">
+                <a href="travel-guide.html"><div class="know-content">
+                    <img src="img\festival-palawan.jpeg" alt="Item 6">
+                    <div class="overlay"></div>
+                    <span>Travel Guide &#8594;</span>
+                </div></a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="feed">
+        <div class="title-container">
+            <span class="title">#Palawan - Uncover hidden gems with us.</span>
+            <span class="subtitle">Follow Us on Instagram @dream_palawan</span>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <div class="column-img"> 
+                    <img src="img\image1_ig.jpg" alt="image1">
+                    <span class="caption">I Love Palawan!</span>                  
+                    <span class="text">@travel_guy</span>
+                    <div class="overlay"></div>
+                </div> 
+                <div class="column-img"> 
+                    <img src="img\image2_ig.jpg" alt="image1">  
+                    <span class="caption">Beach is so nice..OMG!</span>                
+                    <span class="text">@callmemaybe</span>
+                    <div class="overlay"></div>
+                </div> 
+                <div class="column-img"> 
+                    <img src="img\image3_ig.jpg" alt="image1">                  
+                    <span class="caption">Sarap magluto dito!</span>                
+                    <span class="text">@kuya_renan</span>
+                    <div class="overlay"></div>
+                </div> 
+            </div>
+            <div class="column">
+                <div class="column-img">
+                    <img src="img\image5_ig.jpg" alt="image1">
+                    <span class="caption">Mahal ko kayo</span>                
+                    <span class="text">@nayeonyny</span>
+                    <div class="overlay"></div>
+                </div> 
+                <div class="column-img">
+                    <img src="img\image6_ig.jpg" alt="image1">  
+                    <span class="caption">Truly a hidden gem</span>                
+                    <span class="text">@tourism_ig</span>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="column"> 
+                <div class="column-img">                
+                    <img src="img\image7_ig.jpg" alt="image1">
+                    <span class="caption">Fabulous summer vacation</span>                
+                    <span class="text">@dream_palawan</span>
+                    <div class="overlay"></div>
+                </div>
+                <div class="column-img">                
+                    <img src="img\image8_ig.jpg" alt="image1">  
+                    <span class="caption">With my wife, Pam &hearts; </span>                
+                    <span class="text">@jim_halpert</span>
+                    <div class="overlay"></div>
+                </div>
+                <div class="column-img">
+                    <img src="img\image9_ig.jpg" alt="image1"> 
+                    <span class="caption">Palawan x Pogi</span>                
+                    <span class="text">@pogi.lang</span>
+                    <div class="overlay"></div>
+                </div>   
+            </div>   
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="title-container">
+            <span class="title">Frequently Asked Questions.</span>
+            <span class="subtitle">Unlock essential holiday planning insights with our FAQ section. Keep scrolling for more valuable tips to enhance your stay in Palawan.</span>
+        </div>
+
+        <ul id="accordion">
+            <li class="li-accordion">
+                <label for="first">What is the best time of year to visit Palawan? <span>+</span></label>
+                <input type="checkbox" name="accordion" id="first">
+                <div class="content-accordion">
+                    <p>The best time to visit Palawan is during the dry season, which typically runs from November to May. The weather is usually sunny and pleasant, making it ideal for outdoor activities, island hopping, and beach relaxation.</p>
+                </div>
+            </li>
+            <li>
+                <label for="second">What are the top tourist destinations in Palawan? <span>+</span></label>
+                <input type="checkbox" name="accordion" id="second">
+                <div class="content-accordion">
+                    <p>Some of the top tourist destinations in Palawan include El Nido, known for its stunning limestone cliffs and crystal-clear waters; Coron, famous for its diving spots and shipwrecks; and Puerto Princesa, home to the UNESCO World Heritage Site, the Puerto Princesa Subterranean River National Park.</p>
+                </div>
+            </li>
+            <li>
+                <label for="third">How do I get to Palawan? <span>+</span></label>
+                <input type="checkbox" name="accordion" id="third">
+                <div class="content-accordion">
+                    <p>You can reach Palawan by flying into one of its main airports: Puerto Princesa International Airport, El Nido Airport, or Francisco B. Reyes Airport in Coron. There are direct flights from Manila and Cebu, as well as some international flights. Alternatively, you can take a ferry from Manila to Coron or Puerto Princesa.</p>
+                </div>
+            </li>
+            <li>
+                <label for="fourth">What activities can I do in Palawan? <span>+</span></label>
+                <input type="checkbox" name="accordion" id="fourth">
+                <div class="content-accordion">
+                    <p>Palawan offers a wide range of activities for tourists. You can go island hopping, snorkeling, and diving to explore the rich marine life. Hiking, kayaking, and visiting waterfalls are popular for those who enjoy nature and adventure. Don’t miss the chance to visit the underground river in Puerto Princesa and explore the beautiful beaches and lagoons in El Nido and Coron.</p>
+                </div>
+            </li>
+        </ul>
+
+    </section>
+
+    <section class="sign-up" id="sign-up">
+        <div class="title-container">
+            <span class="title">Sign up for Palawan news, deals & offers</span>
+            <span class="subtitle">Uncover hidden gems in your inbox</span>
+        </div>
+
+        <a href="signup.html"><button>Sign Up</button></a>
+    </section>
+
+    
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <img src="img\footer-logo.png" alt="logo">
+            <p class="footer-company-name">&#xa9; Copyright 2024 <strong>Lark Babao</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class='fa fa-map-marker'></i>
+                <p><span>Pasig</span>Philippines</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>0998 394 7259</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:larksigmuondbabao@gmail.com">larksigmuondbabao@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the developer</span>
+                <strong>Lark Babao</strong> is a team-oriented and highly-skilled IT Student from National University, equipped with proficiency in developing applications, designing user interfaces, and creating graphical content & websites.
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/larksigmuondbabao" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/snorlark.dev/" target="_blank"><i class="fa fa-instagram"></i></a> 
+                <a href="https://www.linkedin.com/in/lark-sigmuond-babao-9a8a012b2/" target="_blank"><i class="fa fa-linkedin"></i></a> 
+                <a href="https://www.canva.com/design/DAF6UK90Huw/qC_aWhWJaOJ7QJY4cqrJ1g/edit?utm_content=DAF6UK90Huw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"><i class="fa fa-book"></i></a> 
+            </div>
+        </div>
+    </footer>
+
+</section>
+</body> 
+</html>
