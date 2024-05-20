@@ -244,6 +244,7 @@ button:hover {
 .know .title-container {
     font-family: 'Lusitana', serif;
     display: block; /* Changed to flex for justify-content and align-items to work */
+    margin-top: 80px;
     margin-bottom: 5px;
 }
 

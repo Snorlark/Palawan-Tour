@@ -112,7 +112,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   aspect-ratio: 1440 / 500;
-  background-image: url('/img/beach-tour.avif');
+  background-image: url(https://gttp.imgix.net/301906/x/0/shutterstock-1478003996.jpg?auto=format%2Ccompress&crop=faces%2Cedges%2Ccenter&bg=%23fff&fit=crop&q=32&h=800&dpr=1);
   background-size: cover;
   background-position: 50%;
   z-index: 1;

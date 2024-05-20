@@ -112,7 +112,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   aspect-ratio: 1440 / 500;
-  background-image: url('/img/dessert.jpg');
+  background-image: url(https://media.npr.org/assets/img/2016/11/11/halo-halo_sq-8b53b65a4d8b46df53943f4e737e51f8d510e8f4.jpg?s=700&c=85&f=webp);
   background-size: cover;
   background-position: 50%;
   z-index: 1;
