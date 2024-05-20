@@ -1,0 +1,449 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: #122f44;
+}
+
+body {
+  background-color: #faf5f0;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  position: relative;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+}
+
+.logo {
+  width: 120px;
+  cursor: pointer;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  color: #122f44;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  font-weight: bold;
+}
+
+.nav_links li a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #122f44;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  opacity: 1;
+  pointer-events: none;
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover::after {
+  width: 100%;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  padding: 9px 25px;
+  background-color: transparent;
+  color: #122f44;
+  border-color: #122f44;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-weight: bold;
+}
+
+button:hover {
+  border-radius: 1px;
+}
+
+.content {
+  padding: 0 10%;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  overflow: auto; /* Add overflow to ensure proper spacing */
+  color: #122f44;
+}
+
+.content-text {
+  padding: 0 10%;
+}
+
+.content h1 {
+  font-family: 'Lusitana', serif;
+  font-size: 70px;
+  font-weight: 500;
+  letter-spacing: -3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content section{
+  display: flex;
+  justify-content: center;
+}
+
+
+.form-box{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.inputbox{
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  border-bottom: 2px solid #122f44;
+}
+
+.inputbox label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #122f44;
+  font-size: 1em;
+  pointer-events: none;
+  transition: .5s;
+  font-weight: bold;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding:0 35px 0 5px;
+  color: #122f44;
+}
+
+
+.forget{
+  margin: -15px 0 15px ;
+  font-size: .9em;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;  
+}
+
+.forget label input{
+  margin-right: 5px;
+  
+}
+
+.forget label {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.forget label a{
+  margin-left: 60px;
+  color: #122f44;
+  text-decoration: none;
+}
+
+.forget label a:hover{
+  text-decoration: underline;
+}
+
+.content button{
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #122f44;
+  background-color: #fbf5f1;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.register{
+  font-size: .9em;
+  color: #122f44;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register p a{
+  text-decoration: none;
+  color: #122f44;
+  font-weight: 600;
+}
+
+.register p a:hover{
+  text-decoration: underline;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  transform: scale(1.03); /* Scale up the hovered item */
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.315);
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+.sign-up {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1440 / 460;
+  background-image: url(https://images.pexels.com/photos/12487047/pexels-photo-12487047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-position: 50%;
+  z-index: 1;
+}
+
+.sign-up::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.384);
+  z-index: 0;
+}
+
+.title-container {
+  position: relative;
+  padding-bottom: 40px;
+  z-index: 2;
+}
+
+.sign-up .title {
+  display: block;
+  color: #faf5f0;
+  font-family: 'Lusitana', serif;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.sign-up .subtitle {
+  display: flex;
+  color: #faf5f0;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up button {
+  position: relative;
+  padding: 10px 25px;
+  background-color: transparent;
+  color: #122f44;
+  background-color: #faf5fa;
+  font-weight: bolder;
+  font-size: 14px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.sign-up button:hover {
+  color: #faf5fa;
+  background-color: #122f44;
+  border-color: #faf5fa;
+}
+
+.footer-distributed {
+  position: relative;
+  background-color: #122f44;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 14px sans-serif;
+  padding: 50px 50px 60px 50px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-distributed .footer-left {
+  width: 30%;
+}
+
+.footer-left img {
+  width: 60px;
+  margin-bottom: 70px;
+}
+
+.footer-left strong {
+  color: #8f9296;
+}
+
+.footer-distributed h3 span {
+  color: #e0ac1c;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #fbf5f1;
+  color: #122f44;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #fbf5f1;
+  vertical-align: middle;
+  margin: 0;
+  font-weight: normal;
+}
+
+.footer-distributed .footer-center p span {
+  color: #fbf5f1;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: #fbf5f1;
+  text-decoration: none;
+}
+
+.footer-right strong {
+  color: #8f9296;
+}
+
+.footer-distributed .footer-right {
+  width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 80px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+  background-color: #276897;  
+}
+
+@media (max-width: 880px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}

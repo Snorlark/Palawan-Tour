@@ -1,0 +1,743 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color:#122f44
+}
+
+body {
+    background-color: #faf5f0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.video-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    filter: brightness(60%);
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+header {
+    position: relative;
+    top: 0;
+    z-index: 100; /* Higher than other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%; /* Adjust padding as needed */
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #122f44;
+    padding: 10px 5%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.sticky nav ul.nav_links li a {
+    color: #faf5f0;
+}
+
+.sticky nav a.account button {
+    color: #122f44;
+    background-color: #faf5f0;
+}
+
+.sticky nav a.account button:hover {
+    background-color: #122f44;
+    color: #faf5f0;
+}
+
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #faf5f0;
+    text-decoration: none;
+    font-weight: none;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    font-weight: bold;
+}
+
+.nav_links li a::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background: #faf5f0;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover::after {
+    width: 100%;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    padding: 9px 25px;
+    background-color: transparent;
+    color: #faf5f0;
+    border-color: #faf5f0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    border-radius: 1px;
+}
+
+.content {
+    padding: 50px 5%;
+    color: #faf5f0;
+    position: relative;
+    text-align: left;
+    margin-top: 2rem;
+    display: block;
+    z-index: 2;
+}
+
+.content span {
+    color: #fbf5f1;
+    font-family: 'Lusitana', serif;
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: -3px;
+}
+
+.offers {
+    padding: 20px 5%;
+    color: #faf5f0;
+    position: relative;
+    text-align: left;
+    margin-top: 2rem;
+    z-index: 2;
+}
+
+.offers span {
+    color: #fbf5f1;
+    font-size: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    margin-right: 10px;
+    position: relative;
+    padding: 15px 2%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+    font-weight: bold;
+    color:#122f44;
+    background-color: #faf5f0;
+}
+
+.down-arrow {
+    color: white;
+    position: absolute;
+    top: calc(100vh - 60px);
+    left: calc(50% - 14px);
+    height: 10px;
+    border-radius: 1px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+.down-arrow:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    width: 15px;
+    height: 15px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add a transition for smooth effect */
+}
+
+@keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+}
+
+.down-arrow {
+    animation: jumpInfinite 1.5s infinite;
+}
+
+
+.know {
+    padding: 0 5%;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    color:#122f44; /* Text color */
+}
+
+.know .title-container {
+    font-family: 'Lusitana', serif;
+    display: block; /* Changed to flex for justify-content and align-items to work */
+    margin-bottom: 5px;
+}
+
+.know .title {
+    display: block;
+    font-family: 'Lusitana', serif;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.know .subtitle {
+    font-size: 18px;
+}
+
+
+.list {
+    display: flex;
+    gap: 16px;
+    padding-top: 30px;
+  
+    list-style: none;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  
+.item {
+    flex-shrink: 0;
+    width: 40%;
+    height: 70vh;
+    background-color: #FFF;
+    scroll-snap-align: center;
+    transition: all 0.3s ease; 
+    /* Add a transition for smooth effect */ /* Initial brightness for all items */
+}
+
+.item:hover {
+    transform: scale(1.03); /* Scale up the hovered item */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.856);
+    cursor: pointer;
+}
+
+.know-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.know-content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(95%);
+}
+
+.know-content .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 70%;
+    width: 100%;
+    height: 30%; /* Adjust the height as needed */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Gradient overlay */
+    z-index: 2; /* Above the image but below the text */
+}
+
+.know-content span {
+    position: absolute;
+    z-index: 2;
+    font-weight: lighter;
+    font-size: 18px;
+    color: white;
+    bottom: 40px; /* Adjust as needed for padding from the bottom */
+    left: 30px;
+}
+
+.item:hover .know-content span {
+    font-weight: bold;
+}
+
+.feed {
+    padding: 0px 5%;
+    padding-top: 100px;
+    background-color:#eee3d9;
+}
+
+.feed .title-container {
+    font-family: 'Lusitana', serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.feed .title {
+    font-family: 'Lusitana', serif;
+    font-size: 30px;
+}
+
+.feed .subtitle {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 4px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    cursor: pointer;
+}
+
+.column-img {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.column-img::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url('https://unpkg.com/css.gg/icons/svg/instagram.svg');
+    background-size: cover;
+    z-index: 2;
+    filter: invert(1);  
+}
+
+.column-img img {
+    margin-top: 10px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.caption {
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    bottom: 30px;
+    left: 16px;
+    opacity: 0;
+    transition: 0.5s ease;
+    z-index: 2;
+}
+
+.text {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    opacity: 0;
+    transition: 0.5s ease;
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 30%;
+    width: 100%;
+    height: 0; /* Adjust the height as needed */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0)); /* Gradient overlay */
+    z-index: 1; /* Above the image but below the text */
+}
+
+.column-img:hover .overlay {
+    height: 100%;
+}
+
+.column-img:hover .text {
+    opacity: 1;
+}
+
+.column-img:hover .caption {
+    opacity: 1;
+}
+
+.faq {
+    background-color:#eee3d9;
+    padding: 120px 20%;
+}
+
+.faq .title {
+    display: block;
+    font-family: 'Lusitana', serif;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.faq .subtitle {
+    font-size: 16px;
+    text-align: right;
+}
+
+#accordion {
+    padding-top: 40px;
+}
+
+#accordion li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #faf5f0;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#accordion li:hover {
+    background-color: #c2905a;
+}
+
+#accordion li label {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: inherit;
+    transition: text-decoration, 0.5s
+}
+
+#accordion li label span {
+    font-weight: bold;
+    font-size: 25px;
+    transition: transform 0.5s;
+}
+
+#accordion label + input[type="checkbox"] {
+    display: none;
+}
+
+#accordion .content-accordion {
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+#accordion input[type="checkbox"]:checked + .content-accordion {
+    max-height: 400px;
+    padding: 10px;
+}
+
+.sign-up {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1440 / 460;
+    background-image: url(https://images.pexels.com/photos/12487047/pexels-photo-12487047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: 50%;
+    z-index: 1;
+}
+
+.sign-up::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.384); /* Adjust the opacity here (0.5 is 50% opacity) */
+    z-index: 0;
+}
+
+.title-container {
+    position: relative;
+    padding-bottom: 40px;
+    z-index: 2; /* Ensure the title container is above the overlay */
+}
+
+.sign-up .title {
+    display: block;
+    color: #faf5f0;
+    font-family: 'Lusitana', serif;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.sign-up .subtitle {
+    display: flex;
+    color: #faf5f0;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sign-up button {
+    position: relative;
+    padding: 10px 25px;
+    background-color: transparent;
+    color: #122f44;
+    background-color: #faf5fa;
+    font-weight: bolder;
+    font-size: 14px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.sign-up button:hover {
+    color: #faf5fa;
+    background-color: #122f44;
+    border-color: #faf5fa;
+}
+
+
+.footer-distributed {
+    position: relative;
+    background-color: #122f44;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 14px sans-serif;
+    padding: 50px 50px 60px 50px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-left img {
+    width: 60px;
+    margin-bottom: 70px;
+}
+
+.footer-left strong {
+    color: #8f9296;
+}
+
+.footer-distributed h3 span {
+    color: #e0ac1c;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #fbf5f1;
+    color: #122f44;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #fbf5f1;
+    vertical-align: middle;
+    margin: 0;
+    font-weight: normal;
+}
+
+.footer-distributed .footer-center p span {
+    color: #fbf5f1;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #fbf5f1;
+    text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-right strong {
+    color: #8f9296;
+}
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 80px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #276897;  
+}
+
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}       
+
+
